@@ -1,0 +1,30 @@
+{
+  "name": "@angimenez/react-gallery",
+  "version": "1.0.0",
+  "description": "React Gallery",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel ./src --out-file index.js",
+    "build2": "rollup --config"
+  },
+  "author": "Nicolas Gimenez",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.0",
+    "@angimenez/custom-hooks": "git+https://github.com/angimenez/custom-hooks.git"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.4",
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "@rollup/plugin-babel": "^5.0.4",
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-node-resolve": "^8.1.0",
+    "babel-loader": "^8.1.0",
+    "rollup": "^2.18.2",
+    "webpack": "^4.43.0"
+  }
+}

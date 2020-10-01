@@ -32,7 +32,7 @@ const Exit = styled.button`
   border-radius: 50px;
   font-size: 0.8em;
   font-family: "Montserrat";
-  color: ${colors.dark};
+  color: black;
   border: none;
   background: white;
   @media (max-width: 600px) {

@@ -4,7 +4,8 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
-var React = _interopDefault(require('react'));
+var React = require('react');
+var React__default = _interopDefault(React);
 var styled = _interopDefault(require('styled-components'));
 var customHooks = require('@angimenez/custom-hooks');
 
@@ -138,7 +139,7 @@ var PictureBox = function PictureBox(_ref) {
   var url = _ref.url,
       description = _ref.description;
 
-  var _useState = useState(false),
+  var _useState = React.useState(false),
       _useState2 = _slicedToArray(_useState, 2),
       popup = _useState2[0],
       setPopup = _useState2[1];
@@ -147,16 +148,16 @@ var PictureBox = function PictureBox(_ref) {
     setPopup(!popup);
   };
 
-  return /*#__PURE__*/React.createElement(PictureContainer, {
+  return /*#__PURE__*/React__default.createElement(PictureContainer, {
     popup: popup,
     onClick: handleClick
-  }, /*#__PURE__*/React.createElement(Picture, {
+  }, /*#__PURE__*/React__default.createElement(Picture, {
     src: url,
     alt: description
-  }), popup ? /*#__PURE__*/React.createElement(Exit, {
+  }), popup ? /*#__PURE__*/React__default.createElement(Exit, {
     onClick: handleClick,
     visible: !popup
-  }, "Cerrar") : null, description ? /*#__PURE__*/React.createElement(Text, null, description) : null);
+  }, "Cerrar") : null, description ? /*#__PURE__*/React__default.createElement(Text, null, description) : null);
 };
 
 var Exit = styled.button(_templateObject());
@@ -199,11 +200,11 @@ var ColumnWrapper = function ColumnWrapper(_ref) {
   if (width > SMALL) columCount.push("tablet");
   if (width > MEDIUM) columCount.push("pc");
   if (width > BIG) columCount.push("big");
-  return /*#__PURE__*/React.createElement(React.Fragment, null, columCount.map(function (_, column) {
-    return /*#__PURE__*/React.createElement(Column, {
+  return /*#__PURE__*/React__default.createElement(React__default.Fragment, null, columCount.map(function (_, column) {
+    return /*#__PURE__*/React__default.createElement(Column, {
       width: 90 / columCount.length,
       key: column
-    }, React.Children.map(children, function (child, i) {
+    }, React__default.Children.map(children, function (child, i) {
       return i % columCount.length === column ? child : null;
     }));
   }));
@@ -211,8 +212,8 @@ var ColumnWrapper = function ColumnWrapper(_ref) {
 
 var Images = function Images(_ref2) {
   var images = _ref2.images;
-  if (images && images.length) return /*#__PURE__*/React.createElement(Container, null, /*#__PURE__*/React.createElement(ColumnWrapper, null, images.map(function (item, i) {
-    return /*#__PURE__*/React.createElement(PictureBox, _extends({
+  if (images && images.length) return /*#__PURE__*/React__default.createElement(Container, null, /*#__PURE__*/React__default.createElement(ColumnWrapper, null, images.map(function (item, i) {
+    return /*#__PURE__*/React__default.createElement(PictureBox, _extends({
       key: item.url + i
     }, item));
   })));

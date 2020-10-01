@@ -22,9 +22,9 @@ const PictureBox = ({ url, description }) => {
 };
 
 const Exit = styled.button`
+  position: relative;
   cursor: pointer;
   outline: none;
-  position: absolute;
   right: 10px;
   top: 10px;
   width: 55px;
@@ -60,11 +60,11 @@ const PictureContainer = styled.div`
     props.popup
       ? `
       position: fixed;
-      top: 10%;
-      left: auto;
+      top: 10px;
+      left: 5px;
+      right: 5px;
       overflow: auto;
       z-index:2;
-      transform: scale (1);
   `
       : ""}
   :hover {

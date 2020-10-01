@@ -126,7 +126,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  cursor: pointer;\n  outline: none;\n  position: absolute;\n  right: 10px;\n  top: 10px;\n  width: 55px;\n  height: 20px;\n  border-radius: 50px;\n  font-size: 0.8em;\n  font-family: \"Montserrat\";\n  color: black;\n  border: none;\n  background: white;\n  @media (max-width: 600px) {\n    width: 45px;\n    height: 17px;\n    font-size: 0.5em;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: relative;\n  cursor: pointer;\n  outline: none;\n  right: 10px;\n  top: 10px;\n  width: 55px;\n  height: 20px;\n  border-radius: 50px;\n  font-size: 0.8em;\n  font-family: \"Montserrat\";\n  color: black;\n  border: none;\n  background: white;\n  @media (max-width: 600px) {\n    width: 45px;\n    height: 17px;\n    font-size: 0.5em;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -163,7 +163,7 @@ var PictureBox = function PictureBox(_ref) {
 var Exit = styled.button(_templateObject());
 var Text = styled.p(_templateObject2());
 var PictureContainer = styled.div(_templateObject3(), function (props) {
-  return props.popup ? "\n      position: fixed;\n      top: 10%;\n      left: auto;\n      overflow: auto;\n      z-index:2;\n      transform: scale (1);\n  " : "";
+  return props.popup ? "\n      position: fixed;\n      top: 10px;\n      left: 5px;\n      right: 5px;\n      overflow: auto;\n      z-index:2;\n  " : "";
 });
 var Picture = styled.img(_templateObject4());
 

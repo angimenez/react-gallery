@@ -1,2 +1,2 @@
-# react-doomy-component
-Boilerplate component for library
+# react-gallery
+Gallery component

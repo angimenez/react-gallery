@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useWindowsDimension } from "@angimenez/custom-hooks";
+import PictureBox from "./PictureBox";
 
 const SMALL = 600;
 const MEDIUM = 1000;

@@ -106,7 +106,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  cursor: pointer;\n  width: 100%;\n  margin: 10px 0 10px 0;\n  border-radius: 5px;\n  background-color: whitesmoke;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n  transition: all 1s;\n  ", "\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  cursor: pointer;\n  width: 100%;\n  margin: 10px 0 10px 0;\n  border-radius: 5px;\n  background-color: transparent;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n  transition: all 0.7s;\n  ", "\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -126,7 +126,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  cursor: pointer;\n  outline: none;\n  right: 10px;\n  top: 10px;\n  width: 55px;\n  height: 20px;\n  border-radius: 50px;\n  font-size: 0.8em;\n  color: black;\n  border: none;\n  background: white;\n  @media (max-width: 600px) {\n    width: 45px;\n    height: 17px;\n    font-size: 0.5em;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  cursor: pointer;\n  outline: none;\n  right: 10px;\n  top: 10px;\n  width: 55px;\n  height: 20px;\n  border-radius: 50px;\n  font-size: 0.8em;\n  color: black;\n  border: none;\n  background: lightgray;\n  @media (max-width: 600px) {\n    width: 45px;\n    height: 17px;\n    font-size: 0.5em;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -180,14 +180,14 @@ var PictureBox = function PictureBox(_ref) {
   }), /*#__PURE__*/React__default.createElement(PictureContainer, {
     popup: popup,
     onClick: handleOpen
-  }, /*#__PURE__*/React__default.createElement(BackgroundImage, null, /*#__PURE__*/React__default.createElement(Picture, {
+  }, /*#__PURE__*/React__default.createElement(Picture, {
     src: url,
     alt: description,
     popup: popup
-  })), popup ? /*#__PURE__*/React__default.createElement(Exit, {
+  }), popup ? /*#__PURE__*/React__default.createElement(Exit, {
     onClick: handleClose,
     visible: !popup
-  }, "Cerrar") : null, description ? /*#__PURE__*/React__default.createElement(Text, null, description) : null));
+  }, "Cerrar") : null, description ? /*#__PURE__*/React__default.createElement(BackgroundImage, null, /*#__PURE__*/React__default.createElement(Text, null, description)) : null));
 };
 
 var BackgroundImage = styled.div(_templateObject());
@@ -197,7 +197,7 @@ var Hidden = styled.div(_templateObject2(), function (props) {
 var Exit = styled.button(_templateObject3());
 var Text = styled.p(_templateObject4());
 var PictureContainer = styled.div(_templateObject5(), function (props) {
-  return props.popup ? "\n      cursor: default;\n      position: fixed;\n      top: 10px;\n      left: 5px;\n      right: 5px;\n      overflow: auto;\n      z-index:2;\n      margin: 0;\n      max-height: 90vh;\n      align-items: center;\n      width: auto;\n  " : "\n        :hover {\n            transform: scale(1.02);\n        }";
+  return props.popup ? "\n      cursor: default;\n      position: fixed;\n      top: 10px;\n      left: 5px;\n      right: 5px;\n      overflow: auto;\n      z-index:2;\n      margin: 0;\n      max-height: 90vh;\n      align-items: center;\n      width: auto;\n      background-color: whitesmoke;\n      padding: 5px;\n  " : "\n        :hover {\n            transform: scale(1.02);\n        }";
 });
 var Picture = styled.img(_templateObject6(), function (props) {
   return props.popup ? "\n        height: 80vh;\n        width: auto;\n        @media (max-width: 600px) {\n            width: 100%;\n            height: auto;\n        }\n        " : "";

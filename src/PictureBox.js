@@ -17,15 +17,17 @@ const PictureBox = ({ url, description }) => {
     <>
       <Hidden visible={popup} onClick={handleClose} />
       <PictureContainer popup={popup} onClick={handleOpen}>
-        <BackgroundImage>
-          <Picture src={url} alt={description} popup={popup} />
-        </BackgroundImage>
+        <Picture src={url} alt={description} popup={popup} />
         {popup ? (
           <Exit onClick={handleClose} visible={!popup}>
             Cerrar
           </Exit>
         ) : null}
-        {description ? <Text>{description}</Text> : null}
+        {description ? (
+          <BackgroundImage>
+            <Text>{description}</Text>
+          </BackgroundImage>
+        ) : null}
       </PictureContainer>
     </>
   );
@@ -62,7 +64,7 @@ const Exit = styled.button`
   font-size: 0.8em;
   color: black;
   border: none;
-  background: white;
+  background: lightgray;
   @media (max-width: 600px) {
     width: 45px;
     height: 17px;
@@ -82,9 +84,9 @@ const PictureContainer = styled.div`
   width: 100%;
   margin: 10px 0 10px 0;
   border-radius: 5px;
-  background-color: whitesmoke;
+  background-color: transparent;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  transition: all 1s;
+  transition: all 0.7s;
   ${(props) =>
     props.popup
       ? `
@@ -99,6 +101,8 @@ const PictureContainer = styled.div`
       max-height: 90vh;
       align-items: center;
       width: auto;
+      background-color: whitesmoke;
+      padding: 5px;
   `
       : `
         :hover {

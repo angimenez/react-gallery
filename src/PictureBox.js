@@ -35,7 +35,7 @@ const BackgroundImage = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: black;
+  background-color: white;
 `;
 
 const Hidden = styled.div`

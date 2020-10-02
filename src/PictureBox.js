@@ -38,6 +38,7 @@ const BackgroundImage = styled.div`
   justify-content: center;
   width: 100%;
   background-color: white;
+  border-radius: 5px;
 `;
 
 const Hidden = styled.div`
